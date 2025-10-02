@@ -69,7 +69,8 @@ function Longin(props) {
     setLoading(true)
     await axios.post("http://localhost:8080/user/login", {
       email: user.email,
-      password: user.password
+      password: user.password,
+      role:"USER"
     }).then((res) => {
       if (res.data.token) {
         localStorage.token = res.data.token;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Product from "./Product";
 import axios from "axios";
 import { useEffect } from "react";
+import ProductCard from "./ProductCard";
 
 const Container = styled.div`
     padding: 20px;
@@ -27,8 +28,8 @@ const Products = () => {
 
   return (
     <Container>
-      {productList.map((item) => (
-        <Product item={item}/>
+      {productList.map((item,index) => (
+          <ProductCard products={item}/>
       ))}
     </Container>
   );

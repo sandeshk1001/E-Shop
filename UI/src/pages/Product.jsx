@@ -160,7 +160,7 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src={productDetail.imageUrl}/>
+          <Image src={"/"+productDetail.imageUrl}/>
         </ImgContainer>
         <InfoContainer>
           <Title>{productDetail.name}</Title>
@@ -175,7 +175,7 @@ const Product = () => {
               <FilterColor color="darkblue" />
               <FilterColor color="gray" />
             </Filter>
-            <Filter>
+            {/* <Filter>
               <FilterTitle>Size</FilterTitle>
               <FilterSize>
                 <FilterSizeOption>XS</FilterSizeOption>
@@ -184,7 +184,7 @@ const Product = () => {
                 <FilterSizeOption>L</FilterSizeOption>
                 <FilterSizeOption>XL</FilterSizeOption>
               </FilterSize>
-            </Filter>
+            </Filter> */}
           </FilterContainer>
           <AddContainer>
             <AmountContainer>

@@ -10,6 +10,7 @@ import {
   } from "@material-ui/icons";
   import styled from "styled-components";
   import { mobile } from "../responsive";
+  import { Link } from "react-router-dom";
   
   const Container = styled.div`
     display: flex;
@@ -113,9 +114,9 @@ import {
         <Center>
           <Title>Useful Links</Title>
           <List>
-            <ListItem>Home</ListItem>  
+            <ListItem><Link to="/">Home</Link></ListItem>
+            <Link to="/admin/login"><ListItem>Admin</ListItem></Link>
             <ListItem>Cart</ListItem>
-            <ListItem>Man Fashion</ListItem>
             <ListItem>Woman Fashion</ListItem>
             <ListItem>Accessories</ListItem>
             <ListItem>My Account</ListItem>
@@ -128,13 +129,13 @@ import {
         <Right>
           <Title>Contact</Title>
           <ContactItem>
-            <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+            <Room style={{marginRight:"10px"}}/> Cristal It Park Indore
           </ContactItem>
           <ContactItem>
             <Phone style={{marginRight:"10px"}}/> +1 234 56 78
           </ContactItem>
           <ContactItem>
-            <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+            <MailOutline style={{marginRight:"10px"}} /> contact@abc.in
           </ContactItem>
           <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
         </Right>

@@ -60,9 +60,10 @@ const Ordersummary = ()=> {
                 <Accordion defaultActiveKey="0" style={{ width: "100%" }}>
                     {
                         order.map((each, index) => {
+                            console.log(each)
                             return (<>
-                                <Accordion.Item eventKey={each.orderId} >
-                                    <Accordion.Header style={{ width: "100%" }}> Item #{each.orderId}  Price ({each.totalAmount})</Accordion.Header>
+                                <Accordion.Item eventKey={each.id} >
+                                    <Accordion.Header style={{ width: "100%" }}> Item {each.id}     Price ({each.amount})</Accordion.Header>
                                     <Accordion.Body style={{ backgroundColor: "white", paddingLeft: "30px" }}>
                                         <div class="card-body">
                                             <div class="row m-0">
@@ -94,7 +95,7 @@ const Ordersummary = ()=> {
                                                             <div class="row m-0">
                                                                 <div class="row main align-items-center">
                                                                     <div class="col-2">
-                                                                        <img class="" src={item.product.imageUrl} alt="" width="60" height="60" />
+                                                                        <img class="" src={"/"+item.product.imageUrl} alt="" width="60" height="60" />
                                                                     </div>
                                                                     <div class="col">
                                                                         <div class="row">{item.product.name}</div>
@@ -114,19 +115,7 @@ const Ordersummary = ()=> {
                             </>)
                         })
                     } 
-                    <Accordion.Item eventKey="1">
-                        <Accordion.Header>Accordion Item #2</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
+                </Accordion> 
             </Wrapper>
         </Container>
     </>)

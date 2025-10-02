@@ -9,6 +9,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import {toast} from 'react-toastify';
+import { WindowSharp } from "@mui/icons-material";
+import { LaptopWindowsSharp } from "@material-ui/icons";
 
 
 const Wrapper = styled.div`
@@ -67,11 +69,12 @@ function Longin(props) {
 
   async function loginCheck() {
     setLoading(true)
-    await axios.post("http://localhost:8080/user/admin/login", {
+    await axios.post("http://localhost:8080/admin/login", {
       email: user.email,
       password: user.password,
       role:"ADMIN"
     }).then((res) => {
+      console.log(res)
       if (res.data.token) {
         localStorage.token = res.data.token;
         props.dispatch({
@@ -84,7 +87,6 @@ function Longin(props) {
         })
         toast.success("login Success",{position: toast.POSITION.TOP_CENTER})
         navigate("/admin/home")
-        
       }
     })
       .catch((error) => { 

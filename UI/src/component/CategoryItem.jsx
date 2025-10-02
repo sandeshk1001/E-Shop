@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -48,7 +49,7 @@ const CategoryItem = ({ item }) => {
       <Image src={"https://media.istockphoto.com/photos/the-black-and-silver-are-light-gray-with-white-the-gradient-is-the-picture-id1332097112?b=1&k=20&m=1332097112&s=170667a&w=0&h=D_26WN2nM805ssHpKsrqFe9mE63_j2bNefybNF0wOLw="} />
       <Info>
         <Title>{item.name}</Title>
-        <Button>Explore Now</Button>
+        <Link to="/products"><Button>Explore Now</Button></Link>
       </Info>
     </Container>
   );

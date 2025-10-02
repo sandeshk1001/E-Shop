@@ -4,7 +4,9 @@ const AppReducer=(
         cart:{
             products:[]
         },
-        user:{}
+        user:{
+            role:"USER"
+        }
     }, action
 )=>{
     switch (action.type)
@@ -27,5 +29,5 @@ const AppReducer=(
             return state;
         break;
     }
-    }    
-export default AppReducer
+    } 
+export default AppReducer;

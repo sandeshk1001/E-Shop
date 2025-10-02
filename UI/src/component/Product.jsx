@@ -75,20 +75,12 @@ import { Link } from "react-router-dom";
   `;
   
   const Product = ({ item }) => {
-    // console.log(item)
-
-    // const navigate = useNavigate()
-
-    // function openProductDetail(){
-    //   navigate("/product");
-    // }
-
     return (
-      <Link to={`product/${item.id}`}>
+      <Link to={`/product/${item.id}`}>
       <Container>
         <ContainerInner>
         <Circle />
-        <Image src={item.imageUrl} />
+        <Image src={"/"+item.imageUrl} />
         <Info>
           <Icon>
             <ShoppingCartOutlined />

@@ -22,7 +22,6 @@ const Categories = () => {
     }).then((res)=>{
       setCategory(res.data)
     }).catch((error)=>console.log(error))
-
   },[]);
 
   return (
